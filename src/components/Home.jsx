@@ -1,7 +1,7 @@
 const Home = () => {
   return (
-    <section className="w-screen h-screen">
-      <h1 className="text-red-600">Ceci est mon home</h1>
+    <section className="relative h-screen">
+      <h1 className="text-black-600 text-6xl">Ceci est mon home</h1>
     </section>
   );
 };
