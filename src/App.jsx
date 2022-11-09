@@ -6,16 +6,24 @@ import Contact from "./components/Contact";
 import ButtonDark from "./components/ButtonDark";
 import ButtonLanguage from "./components/ButtonLanguage";
 
+import { DarkContext } from "./context/DarkContext";
+import { LangContext } from "./context/LangContext";
+import { useState } from "react";
+
 function App() {
+  const [lang, setLang] = useState("French");
+
   return (
     <div className="App relative text-center">
-      <GeneralBackgroundDark />
-      <ButtonLanguage />
-      <ButtonDark />
-      <Home />
-      <About />
-      <Projects />
-      <Contact />
+      <LangContext.Provider value={[lang, setLang]}>
+        <GeneralBackgroundDark />
+        <ButtonLanguage />
+        <ButtonDark />
+        <Home />
+        <About />
+        <Projects />
+        <Contact />
+      </LangContext.Provider>
     </div>
   );
 }

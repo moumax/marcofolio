@@ -1,4 +1,10 @@
+import { useState } from "react";
+import { LangContext } from "../context/LangContext";
+
 const ButtonLanguage = () => {
+  const [isFrench, setIsFrench] = useState(true);
+  console.log(isFrench);
+
   return (
     <div>
       <div>
@@ -7,6 +13,7 @@ const ButtonLanguage = () => {
           type="checkbox"
           role="switch"
           id="flexSwitchCheckDefault"
+          onClick={() => setIsFrench(!isFrench)}
         ></input>
         <label
           className="relative form-check-label inline-block text-white"
