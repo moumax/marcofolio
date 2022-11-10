@@ -1,9 +1,14 @@
+import { LangContext } from "../context/LangContext";
+import { useContext } from "react";
+import traduction from "../Datas/Traduction";
+
 import PortfolioDatas from "../Datas/PortfolioDatas";
 
 const Projects = () => {
+  const { language } = useContext(LangContext);
   return (
     <section className="relative">
-      <h1 className="text-4xl">Projets</h1>
+      <h1 className="text-4xl">{traduction[language].projectTitle}</h1>
       {PortfolioDatas.map((data) => (
         <div className="flex flex-col items-center">
           <h2 className="text-4xl mb-5">{data.titre}</h2>
@@ -14,7 +19,9 @@ const Projects = () => {
               alt={data.image}
             />
           </a>
-          <p className="mb-2 text-3xl w-2/3">{data.description}</p>
+          <p className="mb-2 text-3xl w-2/3">
+            {language == "fr" ? data.descriptionFR : data.descriptionEN}
+          </p>
           <ul className="mb-12 text-2xl">
             <li className={data.techno1 ? "techno" : "techno0"}>
               {data.techno1}

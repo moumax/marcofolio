@@ -1,8 +1,13 @@
 import { useForm, ValidationError } from "@formspree/react";
 import Button from "./Button";
+import { LangContext } from "../context/LangContext";
+import { useContext } from "react";
+import traduction from "../Datas/Traduction.js";
 
 const Form = () => {
   const [state, handlesubmit] = useForm("mzbwjygp");
+  const { language } = useContext(LangContext);
+  const className = "rounded-md m-3 text-center bg-slate-500";
 
   if (state.succeeded) {
     return (
@@ -16,38 +21,39 @@ const Form = () => {
       className="flex flex-col w-full items-center justify-center text-xl font-bold"
       onSubmit={handlesubmit}
     >
-      <label>Nom, Prénom</label>
       <input
+        className={className}
         type="text"
         name="name"
         id="full-name"
-        placeholder="Nom, Prénom"
+        placeholder={traduction[language].formName}
         required=""
       ></input>
-      <label>Email</label>
       <input
+        className={className}
         type="email"
         id="email"
         name="email"
-        placeholder="toto@gmail.com"
+        placeholder={traduction[language].formEmail}
       ></input>
       <ValidationError prefix="Email" field="email" errors={state.errors} />
-      <label>Téléphone</label>
       <input
+        className={className}
         type="telephone"
         name="telephone"
         id="telephone"
-        placeholder="06 31 31 31 31"
+        placeholder={traduction[language].formPhone}
       ></input>
-      <label>Votre message</label>
+
       <textarea
+        className={className}
         id="message"
         name="message"
-        placeholder="Mon message"
+        placeholder={traduction[language].formMessage}
       ></textarea>
       <ValidationError prefix="Message" field="message" errors={state.errors} />
       <Button type={"submit"} disabled={state.submitting}>
-        Envoyer votre formulaire
+        {traduction[language].formButtonSend}
       </Button>
     </form>
   );

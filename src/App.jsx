@@ -1,18 +1,37 @@
+import { useContext } from "react";
+import { ModeContext } from "./context/ModeContext";
+
+import LangContextProvider from "./context/LangContext";
+
 import About from "./components/About";
 import Home from "./components/Home";
-import GeneralBackgroundDark from "./components/GeneralBackgroundDark";
+import GeneralBackgroundDark from "./components/GeneralBackground";
 import Projects from "./components/Projects";
 import Contact from "./components/Contact";
+import ButtonLanguage from "./components/ButtonLanguage";
+import ButtonMode from "./components/ButtonMode";
 
 function App() {
+  const { mode } = useContext(ModeContext);
+
   return (
-    <div className="App relative text-center">
-      <GeneralBackgroundDark />
-      <Home />
-      <About />
-      <Projects />
-      <Contact />
-    </div>
+    <LangContextProvider>
+      <div
+        className={
+          mode === "light"
+            ? "App relative text-center text-white"
+            : "App relative text-center text-black"
+        }
+      >
+        <GeneralBackgroundDark />
+        <ButtonLanguage />
+        <ButtonMode />
+        <Home />
+        <About />
+        <Projects />
+        <Contact />
+      </div>
+    </LangContextProvider>
   );
 }
 
