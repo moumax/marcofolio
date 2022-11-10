@@ -24,8 +24,10 @@ function App() {
         }
       >
         <GeneralBackgroundDark />
-        <ButtonLanguage />
-        <ButtonMode />
+        <div className="absolute z-10 flex justify-between w-full ml-5 pr-10 mt-5">
+          <ButtonLanguage />
+          <ButtonMode />
+        </div>
         <Home />
         <About />
         <Projects />

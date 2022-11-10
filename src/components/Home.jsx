@@ -6,11 +6,9 @@ const Home = () => {
   const { language } = useContext(LangContext);
 
   return (
-    <section className="relative h-screen">
-      <h1 className="text-black-600 text-6xl">
-        {traduction[language].bonjour}
-      </h1>
-      <h2 className="text-black-600 text-3xl">{traduction[language].me}</h2>
+    <section className="relative h-screen ml-5 mr-5 flex flex-col justify-center pb-48">
+      <h1 className="text-5xl mb-10 mt-24">{traduction[language].bonjour}</h1>
+      <h2 className="text-black-600 text-2xl">{traduction[language].me}</h2>
     </section>
   );
 };

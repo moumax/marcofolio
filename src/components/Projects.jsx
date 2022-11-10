@@ -7,22 +7,22 @@ import PortfolioDatas from "../Datas/PortfolioDatas";
 const Projects = () => {
   const { language } = useContext(LangContext);
   return (
-    <section className="relative">
-      <h1 className="text-4xl">{traduction[language].projectTitle}</h1>
+    <section className="relative mb-40">
+      <h1 className="text-4xl mb-10">{traduction[language].projectTitle}</h1>
       {PortfolioDatas.map((data) => (
         <div className="flex flex-col items-center">
-          <h2 className="text-4xl mb-5">{data.titre}</h2>
+          <h2 className="text-3xl mb-5">{data.titre}</h2>
           <a href={data.lien} target="_blank" rel="noopener noreferrer">
             <img
-              className="w-fit rounded-3xl  mx-auto mb-6"
+              className="w-fit rounded-full mb-6 pl-5 pr-5"
               src={data.image}
               alt={data.image}
             />
           </a>
-          <p className="mb-2 text-3xl w-2/3">
+          <p className="mb-5 text-xl ml-2 mr-2">
             {language == "fr" ? data.descriptionFR : data.descriptionEN}
           </p>
-          <ul className="mb-12 text-2xl">
+          <ul className="flex flex-wrap justify-center gap-2 mb-12 text-2xl">
             <li className={data.techno1 ? "techno" : "techno0"}>
               {data.techno1}
             </li>
