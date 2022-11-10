@@ -9,32 +9,38 @@ const SoftSkills = [
   {
     id: 1,
     image: autonomie,
-    texte: "Autonomie",
+    texteFr: "Autonomie",
+    texteEn: "Autonomy",
   },
   {
     id: 2,
     image: organisation,
-    texte: "Organisation",
+    texteFr: "Organisation",
+    texteEn: "Organisation",
   },
   {
     id: 3,
     image: teamwork,
-    texte: "Travail d'équipe",
+    texteFr: "Travail d'équipe",
+    texteEn: "Team working",
   },
   {
     id: 4,
     image: proactif,
-    texte: "Proactivité",
+    texteFr: "Proactivité",
+    texteEn: "Proactivity",
   },
   {
     id: 5,
     image: patience,
-    texte: "Patience",
+    texteFr: "Patience",
+    texteEn: "Patience",
   },
   {
     id: 6,
     image: temps,
-    texte: "Gestion du temps",
+    texteFr: "Gestion du temps",
+    texteEn: "Time management",
   },
 ];
 

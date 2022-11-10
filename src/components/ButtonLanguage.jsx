@@ -1,5 +1,6 @@
 import { useContext } from "react";
 import { LangContext } from "../context/LangContext";
+import traduction from "../Datas/Traduction";
 
 const ButtonLanguage = () => {
   const { switchLang, language } = useContext(LangContext);
@@ -18,7 +19,9 @@ const ButtonLanguage = () => {
         <label
           className="relative form-check-label inline-block text-white"
           htmlFor="flexSwitchCheckDefault"
-        ></label>
+        >
+          {traduction[language].buttonLabel}
+        </label>
       </div>
     </div>
   );
