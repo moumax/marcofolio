@@ -17,7 +17,7 @@ const ButtonLanguage = () => {
           }}
         ></input>
         <label
-          className="relative form-check-label inline-block text-white"
+          className="relative form-check-label inline-block"
           htmlFor="flexSwitchCheckDefault"
         >
           {traduction[language].buttonLabel}

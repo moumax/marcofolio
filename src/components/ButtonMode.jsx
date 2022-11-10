@@ -1,4 +1,8 @@
-const ButtonDark = () => {
+import { useContext } from "react";
+import { ModeContext } from "../context/ModeContext";
+
+const ButtonMode = () => {
+  const { switchMode, mode } = useContext(ModeContext);
   return (
     <div>
       <div>
@@ -7,16 +11,19 @@ const ButtonDark = () => {
           type="checkbox"
           role="switch"
           id="flexSwitchCheckDefault"
+          onClick={(e) => {
+            mode == "light" ? switchMode("dark") : switchMode("light");
+          }}
         ></input>
         <label
-          className="relative form-check-label inline-block text-white"
+          className="relative form-check-label inline-block"
           htmlFor="flexSwitchCheckDefault"
         >
-          White mode
+          {mode === "light" ? "White mode" : "Dark mode"}
         </label>
       </div>
     </div>
   );
 };
 
-export default ButtonDark;
+export default ButtonMode;
