@@ -7,7 +7,7 @@ import traduction from "../Datas/Traduction.js";
 const Form = () => {
   const [state, handlesubmit] = useForm("mzbwjygp");
   const { language } = useContext(LangContext);
-  const className = "rounded-md m-3 text-center";
+  const className = "rounded-md m-3 text-center bg-slate-500";
 
   if (state.succeeded) {
     return (
