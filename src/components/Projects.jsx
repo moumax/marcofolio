@@ -1,43 +1,67 @@
 import { LangContext } from "../context/LangContext";
 import { useContext } from "react";
+import { ModeContext } from "../context/ModeContext";
 import traduction from "../Datas/Traduction";
 
 import PortfolioDatas from "../Datas/PortfolioDatas";
 
 const Projects = () => {
   const { language } = useContext(LangContext);
+  const { mode } = useContext(ModeContext);
+
   return (
     <section className="relative mb-40">
       <h1 className="text-4xl mb-10">{traduction[language].projectTitle}</h1>
       {PortfolioDatas.map((data) => (
-        <div className="flex flex-col items-center">
-          <h2 className="text-3xl mb-5">{data.titre}</h2>
+        <div className="flex flex-col items-center border-2 border-slate-800 rounded-md overflow-hidden m-10">
           <a href={data.lien} target="_blank" rel="noopener noreferrer">
-            <img
-              className="w-fit rounded-full mb-6 pl-5 pr-5"
-              src={data.image}
-              alt={data.image}
-            />
+            {mode == "dark" ? (
+              <img
+                className="w-fit"
+                src={data.imageLight || data.image}
+                alt={data.imageLight}
+              />
+            ) : (
+              <img
+                className="w-fit"
+                src={data.imageDark || data.image}
+                alt={data.imageDark}
+              />
+            )}
           </a>
-          <p className="mb-5 text-xl ml-2 mr-2">
-            {language == "fr" ? data.descriptionFR : data.descriptionEN}
-          </p>
+          <h2 className="text-start text-2xl mt-5 mb-5 ml-4 w-full">
+            {data.titre}
+          </h2>
           <ul className="flex flex-wrap justify-center gap-2 mb-12 text-2xl">
-            <li className={data.techno1 ? "techno" : "techno0"}>
-              {data.techno1}
-            </li>
-            <li className={data.techno2 ? "techno" : "techno0"}>
-              {data.techno2}
-            </li>
-            <li className={data.techno3 ? "techno" : "techno0"}>
-              {data.techno3}
-            </li>
-            <li className={data.techno4 ? "techno" : "techno0"}>
-              {data.techno4}
-            </li>
-            <li className={data.techno5 ? "techno" : "techno0"}>
-              {data.techno5 ? data.techno5 : ""}
-            </li>
+            {data.techno1 ? (
+              <li className="border-2 border-stone-900 rounded-md hover:text-blue-300">
+                <span className="m-2">{data.techno1}</span>
+              </li>
+            ) : null}
+
+            {data.techno2 ? (
+              <li className="border-2 border-stone-900 rounded-md hover:text-blue-300">
+                <span className="m-2">{data.techno2}</span>
+              </li>
+            ) : null}
+
+            {data.techno3 ? (
+              <li className="border-2 border-stone-900 rounded-md hover:text-blue-300">
+                <span className="m-2">{data.techno3}</span>
+              </li>
+            ) : null}
+
+            {data.techno4 ? (
+              <li className="border-2 border-stone-900 rounded-md hover:text-blue-300">
+                <span className="m-2">{data.techno4}</span>
+              </li>
+            ) : null}
+
+            {data.techno5 ? (
+              <li className="border-2 border-stone-900 rounded-md hover:text-blue-300">
+                <span className="m-2">{data.techno5}</span>
+              </li>
+            ) : null}
           </ul>
         </div>
       ))}

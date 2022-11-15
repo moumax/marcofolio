@@ -3,6 +3,8 @@ import post from "../assets/projects/post.png";
 import movieflix from "../assets/projects/movieflix.png";
 import obsstjean from "../assets/projects/obsstjean.png";
 import lumios from "../assets/projects/lumios.png";
+import marcofolioDark from "../assets/projects/marcofolioDark.png";
+import marcofolioLight from "../assets/projects/marcofolioLight.png";
 
 const portfolioDatas = [
   {
@@ -19,6 +21,19 @@ const portfolioDatas = [
     techno3: "Sass",
     techno4: "mysql",
     techno5: "NodeJs",
+  },
+  {
+    titre: "Marcofolio",
+    imageLight: marcofolioDark,
+    imageDark: marcofolioLight,
+    lien: "https://github.com/WildCodeSchool/2022-03-JS-RemoteFR-TeamKarma-P3-Lumios",
+    descriptionFR:
+      "Aboutissement de ma formation, le projet professionel Lumios avait pour but d'apporter une solution à un porteur de projet en suivant un plan de charge. C'était pour nous l'occasion d'utiliser toutes nos connaissances acquises durant le bootcamp afin de pouvoir devenir développeurs Full Stack.",
+    descriptionEN:
+      "This is my last professional project at the Wild Code School! We have a business plan to follow. It is a syntesis of what we learned during our bootcamp to be a full stack developer.  ",
+    github: "https:github.com/moumax/marcofolio",
+    techno1: "React.js",
+    techno2: "TailwindCss",
   },
   {
     titre: "The wild post",
@@ -43,7 +58,6 @@ const portfolioDatas = [
       "This second bootcamp project introduces us to React. We choose to use a movie API which is very popular. We have to fetch some datas and show them with some tools.",
     techno1: "Html",
     techno2: "Css",
-    techno3: "Javascript",
     techno4: "React",
     techno5: "ChakraUi",
   },
