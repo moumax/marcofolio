@@ -62,7 +62,7 @@ const portfolioDatas = [
     techno5: "ChakraUi",
   },
   {
-    titre: "Observatoire de Saint Jean Le Blanc",
+    titre: "Obsstjean",
     image: obsstjean,
     lien: "https://obsstjean.fr/",
     descriptionFR:

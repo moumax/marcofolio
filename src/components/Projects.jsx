@@ -29,7 +29,7 @@ const Projects = () => {
               />
             )}
           </a>
-          <h2 className="text-start text-2xl mt-5 mb-5 ml-4 w-full">
+          <h2 className="text-start text-2xl mt-5 mb-5 ml-4 w-full underline">
             {data.titre}
           </h2>
           <ul className="flex flex-wrap justify-center gap-2 mb-12 text-2xl">
