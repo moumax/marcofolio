@@ -13,14 +13,14 @@ const About = () => {
   const { language } = useContext(LangContext);
 
   const classNameTitle = {
-    className: "text-4xl m-10",
+    className: "text-start ml-2 text-2xl mb-6 underline",
   };
   const classNameSkills = {
-    className: "flex flex-wrap gap-10 justify-center",
+    className: "flex flex-wrap gap-2 justify-center",
   };
 
   return (
-    <section className="relative h-full mb-40">
+    <section className="relative h-screen">
       <h2 className={classNameTitle.className}>
         {traduction[language].softSkillTitle}
       </h2>
