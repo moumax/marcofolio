@@ -10,7 +10,7 @@ const Projects = () => {
   const { mode } = useContext(ModeContext);
 
   return (
-    <section className="relative mb-40">
+    <section className="relative mb-20">
       <h1 className="text-4xl mb-10">{traduction[language].projectTitle}</h1>
       {PortfolioDatas.map((data) => (
         <div className="flex flex-col items-center border-2 border-slate-800 rounded-md overflow-hidden m-10">
