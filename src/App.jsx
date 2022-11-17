@@ -24,7 +24,7 @@ function App() {
         }
       >
         <GeneralBackgroundDark />
-        <div className="fixed z-10 h-24 items-center flex justify-around w-full 5 backdrop-blur-sm ">
+        <div className="fixed z-10 h-24 items-center flex justify-around w-full 5 backdrop-blur-sm">
           <ButtonLanguage />
           <ButtonMode />
         </div>
