@@ -1,6 +1,6 @@
 const traduction = {
   fr: {
-    bonjour: "Bonjour !",
+    bonjour: "Bonjour!",
     me: "Je m'appelle Marc et je suis Développeur web Full Stack...",
     //Form :
     formTitle: "Contactez moi",

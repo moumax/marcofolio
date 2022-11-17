@@ -3,24 +3,49 @@ import { ModeContext } from "../context/ModeContext";
 
 const ButtonMode = () => {
   const { switchMode, mode } = useContext(ModeContext);
+
+  const sun = (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      fill="none"
+      viewBox="0 0 24 24"
+      strokeWidth={1.5}
+      stroke="currentColor"
+      className="w-10 h-10 text-orange-400"
+    >
+      <path
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        d="M12 3v2.25m6.364.386l-1.591 1.591M21 12h-2.25m-.386 6.364l-1.591-1.591M12 18.75V21m-4.773-4.227l-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0z"
+      />
+    </svg>
+  );
+
+  const moon = (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      fill="none"
+      viewBox="0 0 24 24"
+      strokeWidth={1.5}
+      stroke="currentColor"
+      className="w-10 h-10 text-stone-500" 
+    >
+      <path
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        d="M21.752 15.002A9.718 9.718 0 0118 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 003 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 009.002-5.998z"
+      />
+    </svg>
+  );
+
   return (
     <div>
       <div>
-        <input
-          className="fixed -ml-16 appearance-none w-9 focus:outline-none checked:bg-blue-300 h-5 bg-gray-300 rounded-full before:inline-block before:rounded-full before:bg-blue-500 before:h-4 before:w-4 checked:before:translate-x-full shadow-inner transition-all duration-300 before:ml-0.5"
-          type="checkbox"
-          role="switch"
-          id="flexSwitchCheckDefault"
-          onClick={(e) => {
-            mode == "light" ? switchMode("dark") : switchMode("light");
-          }}
-        ></input>
-        <label
-          className="fixed -ml-5 form-check-label inline-block mx-11 -my-1"
-          htmlFor="flexSwitchCheckDefault"
-        >
-          {mode === "light" ? "Light" : "Dark"}
-        </label>
+        <button type="button" onClick={() => {
+          mode == "light" ? switchMode("dark") : switchMode("light");
+        }} className="right-20 top-4 text-lg rounded-md">
+          {mode === "dark" ? moon : sun}
+        </button>
       </div>
     </div>
   );
