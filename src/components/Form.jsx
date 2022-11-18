@@ -2,7 +2,7 @@ import { useForm, ValidationError } from "@formspree/react";
 import Button from "./Button";
 import { LangContext } from "../context/LangContext";
 import { useContext } from "react";
-import traduction from "../Datas/Traduction.js";
+import traduction from "../Datas/dataTraduction";
 
 const Form = () => {
   const [state, handlesubmit] = useForm("mzbwjygp");

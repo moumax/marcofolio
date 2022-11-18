@@ -1,9 +1,9 @@
 import { LangContext } from "../context/LangContext";
 import { useContext } from "react";
 import { ModeContext } from "../context/ModeContext";
-import traduction from "../Datas/Traduction";
 
-import PortfolioDatas from "../Datas/PortfolioDatas";
+import traduction from "../Datas/dataTraduction";
+import dataPortfolio from "../Datas/dataPortfolio";
 
 const Projects = () => {
   const { language } = useContext(LangContext);
@@ -12,8 +12,8 @@ const Projects = () => {
   return (
     <section className="relative mb-20">
       <h1 className="text-3xl mb-10">{traduction[language].projectTitle}</h1>
-      {PortfolioDatas.map((data) => (
-        <div className="flex flex-col items-center border-2 border-slate-800 rounded-md overflow-hidden m-10">
+      {dataPortfolio.map((data) => (
+        <div  key={data.titre} className="flex flex-col items-center border-2 border-slate-800 rounded-md overflow-hidden m-10">
           <a href={data.lien} target="_blank" rel="noopener noreferrer">
             {mode == "dark" ? (
               <img

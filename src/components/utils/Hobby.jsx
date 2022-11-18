@@ -1,4 +1,4 @@
-import { LangContext } from "../context/LangContext";
+import { LangContext } from "../../context/LangContext";
 import { useContext } from "react";
 
 const Hobby = ({ like }) => {

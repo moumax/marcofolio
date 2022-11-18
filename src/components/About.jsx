@@ -1,13 +1,14 @@
 import { LangContext } from "../context/LangContext";
 import { useContext } from "react";
-import traduction from "../Datas/Traduction";
 
-import SoftSkills from "../Datas/Softskills";
-import HardSkills from "../Datas/Hardskills";
-import Hobbies from "../Datas/Hobbies";
-import Softskill from "../components/Softskill";
-import Hardskill from "../components/Hardskill";
-import Hobby from "../components/Hobby";
+import traduction from "../Datas/dataTraduction";
+import DataSoftSkills from "../Datas/dataSoftskills";
+import DatasHardSkills from "../Datas/dataHardskills";
+import DataHobbies from "../Datas/dataHobbies";
+
+import Softskill from "./utils/Softskill"
+import Hardskill from "./utils/Hardskill";
+import Hobby from "./utils/Hobby";
 
 const About = () => {
   const { language } = useContext(LangContext);
@@ -25,7 +26,7 @@ const About = () => {
         {traduction[language].softSkillTitle}
       </h2>
       <div className={classNameSkills.className}>
-        {SoftSkills.map((skill) => (
+        {DataSoftSkills.map((skill) => (
           <Softskill skill={skill} key={skill.id} />
         ))}
       </div>
@@ -33,7 +34,7 @@ const About = () => {
         {traduction[language].hardSkillTitle}
       </h2>
       <div className={classNameSkills.className}>
-        {HardSkills.map((skill) => (
+        {DatasHardSkills.map((skill) => (
           <Hardskill skill={skill} key={skill.id} />
         ))}
       </div>
@@ -41,7 +42,7 @@ const About = () => {
         {traduction[language].hobbyTitle}
       </h2>
       <div className={classNameSkills.className}>
-        {Hobbies.map((like) => (
+        {DataHobbies.map((like) => (
           <Hobby like={like} key={like.id} />
         ))}
       </div>

@@ -1,7 +1,7 @@
 import Form from "./Form";
 import { LangContext } from "../context/LangContext";
 import { useContext } from "react";
-import traduction from "../Datas/Traduction.js";
+import traduction from "../Datas/dataTraduction";
 
 const Contact = () => {
   const { language } = useContext(LangContext);
