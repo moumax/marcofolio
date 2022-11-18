@@ -6,7 +6,7 @@ import traduction from "../Datas/dataTraduction";
 const Contact = () => {
   const { language } = useContext(LangContext);
   return (
-    <section className="relative h-screen">
+    <section className="relative h-screen -z-1">
       <h2 className="text-3xl">{traduction[language].formTitle}</h2>
       <Form />
     </section>

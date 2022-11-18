@@ -30,7 +30,7 @@ function App() {
           className="fixed h-24 items-center flex gap-10 xs:flex-col xs:top-3 xs:left-80"
           initial={{ x: "-100vh" }}
           animate={{ x: 0 }}
-          transition={{ delay: 0.1 }}
+          transition={{ delay: 0.5 }}
         >
           <ButtonLanguage />
           <ButtonMode />

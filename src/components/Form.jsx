@@ -7,7 +7,7 @@ import traduction from "../Datas/dataTraduction";
 const Form = () => {
   const [state, handlesubmit] = useForm("mzbwjygp");
   const { language } = useContext(LangContext);
-  const className = "rounded-md m-3 text-center bg-slate-200 h-11 text-black";
+  const className = "rounded-md m-3 text-center bg-slate-600 h-11 text-black";
 
   if (state.succeeded) {
     return (
@@ -46,7 +46,7 @@ const Form = () => {
       ></input>
 
       <textarea
-        className="rounded-md m-3 text-center bg-slate-200 h-40 text-black"
+        className="rounded-md m-3 text-center bg-slate-600 h-40 text-black"
         id="message"
         name="message"
         placeholder={traduction[language].formMessage}
