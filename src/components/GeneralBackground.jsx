@@ -7,11 +7,13 @@ const GeneralBackground = () => {
     <div
       className={
         mode === "light"
-          ? "absolute min-h-screen bg-gradient-to-r from-blue-600 to-blue-900 p-10 w-full h-full z-0"
-          : "absolute min-h-screen bg-white p-10 w-full h-full z-0"
+          ? "absolute bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-gray-700 via-gray-900 to-black w-screen h-full"
+          : "absolute bg-white w-screen h-full"
       }
     ></div>
   );
 };
 
 export default GeneralBackground;
+
+

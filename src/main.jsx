@@ -7,7 +7,7 @@ import ModeContextProvider from "./context/ModeContext";
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <ModeContextProvider>
-      <div className="mx-96 xs:mx-10">
+      <div>
         <App />
       </div>
     </ModeContextProvider>

@@ -21,8 +21,8 @@ function App() {
       <div
         className={
           mode === "light"
-            ? "App relative text-center text-white"
-            : "App relative text-center text-black"
+            ? "absolute text-center text-white"
+            : "absolute text-center text-black"
         }
       >
         <GeneralBackgroundDark />
@@ -35,10 +35,12 @@ function App() {
           <ButtonLanguage />
           <ButtonMode />
         </motion.div>
-        <Home />
-        <About />
-        <Projects />
-        <Contact />
+        <div className="p-10">
+          <Home />
+          <About />
+          <Projects />
+          <Contact />
+        </div>
       </div>
       {/* <Tools /> */}
     </LangContextProvider>
