@@ -2,6 +2,9 @@
 module.exports = {
   content: ["./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
+    screens: {
+      "xs": "374px",
+    },
     extend: {},
     fontFamily: {
       sans: ['"Exo 2"'],

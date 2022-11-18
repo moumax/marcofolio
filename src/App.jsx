@@ -27,10 +27,10 @@ function App() {
       >
         <GeneralBackgroundDark />
         <motion.div
-          initial={{ y: "-100vh" }}
-          animate={{ y: 0 }}
-          transition={{ delay: 0.3 }}
-          className="fixed z-10 h-24 items-center flex justify-around w-screen 5 backdrop-blur-sm"
+          className="fixed h-24 items-center flex gap-10 xs:flex-col xs:top-3 xs:left-80"
+          initial={{ x: "-100vh" }}
+          animate={{ x: 0 }}
+          transition={{ delay: 0.1 }}
         >
           <ButtonLanguage />
           <ButtonMode />
@@ -40,7 +40,7 @@ function App() {
         <Projects />
         <Contact />
       </div>
-      <Tools />
+      {/* <Tools /> */}
     </LangContextProvider>
   );
 }

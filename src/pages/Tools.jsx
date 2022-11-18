@@ -5,7 +5,6 @@ import Npm from "../components/utils//tools/Npm";
 import dataNpm from "../Datas/tools/dataNpm";
 import dataGraphism from "../Datas/tools/dataGraphism";
 import dataGit from "../Datas/tools/dataGit";
-import { data } from "autoprefixer";
 
 /*  One data file like dataNpm, one component who displays the data, one master component to map throught the data Array. */
 

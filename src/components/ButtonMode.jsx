@@ -45,14 +45,14 @@ const ButtonMode = () => {
         <motion.button
           initial={{ scale: 1 }}
           animate={{ scale: 1.4 }}
-          transition={{ yoyo: Infinity }}
+          transition={{ repeat: Infinity, repeatDelay: 0.5 }}
           type="button"
           onClick={() => {
             mode == "light" ? switchMode("dark") : switchMode("light");
           }}
           className="right-20 top-4 text-lg rounded-md"
         >
-          {mode === "dark" ? moon : sun}
+          {mode != "dark" ? moon : sun}
         </motion.button>
       </div>
     </div>

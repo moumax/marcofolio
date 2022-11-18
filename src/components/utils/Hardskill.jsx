@@ -6,11 +6,11 @@ const Hardskill = ({ skill }) => {
 
   return (
     <div className="w-20 flex flex-col items-center">
-      <p className="text-xs text-center mb-3">{skill.texte}</p>
+      <p className="text-xs text-center 2xl:text-xl">{skill.texte}</p>
       {mode != "dark" ? (
-        <img className="w-10" src={skill.imageBw} alt={skill.imageBw} />
+        <img className="w-10 2xl:w-36" src={skill.imageBw} alt={skill.imageBw} />
       ) : (
-        <img className="w-10" src={skill.imageColor} alt={skill.imageColor} />
+        <img className="w-10 2xl:w-36" src={skill.imageColor} alt={skill.imageColor} />
       )}
     </div>
   );
