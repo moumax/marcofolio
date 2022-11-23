@@ -2,6 +2,8 @@ const traduction = {
   fr: {
     bonjour: "Bonjour!",
     me: "Je m'appelle Marc et je suis Développeur web Full Stack...",
+    search:
+      "Je suis actuellement à la recherche d'une alternance d'un an pour pour obtenir le titre concepteur et developpeur d'application.",
     //Form :
     formTitle: "Contactez moi",
     formName: "Nom, Prénom",

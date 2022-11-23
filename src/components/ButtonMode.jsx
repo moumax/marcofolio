@@ -1,5 +1,6 @@
 import { useContext } from "react";
 import { ModeContext } from "../context/ModeContext";
+import { motion } from "framer-motion";
 
 const ButtonMode = () => {
   const { switchMode, mode } = useContext(ModeContext);
@@ -11,7 +12,7 @@ const ButtonMode = () => {
       viewBox="0 0 24 24"
       strokeWidth={1.5}
       stroke="currentColor"
-      className="w-10 h-10 text-orange-400"
+      className="xs:w-8 xs:h-8 text-orange-400"
     >
       <path
         strokeLinecap="round"
@@ -28,7 +29,7 @@ const ButtonMode = () => {
       viewBox="0 0 24 24"
       strokeWidth={1.5}
       stroke="currentColor"
-      className="w-10 h-10 text-stone-500" 
+      className="xs:w-8 xs:h-8 text-white"
     >
       <path
         strokeLinecap="round"
@@ -41,11 +42,18 @@ const ButtonMode = () => {
   return (
     <div>
       <div>
-        <button type="button" onClick={() => {
-          mode == "light" ? switchMode("dark") : switchMode("light");
-        }} className="right-20 top-4 text-lg rounded-md">
-          {mode === "dark" ? moon : sun}
-        </button>
+        <motion.button
+          initial={{ scale: 1 }}
+          animate={{ scale: 1.4 }}
+          transition={{ repeat: Infinity, repeatDelay: 0.5 }}
+          type="button"
+          onClick={() => {
+            mode == "light" ? switchMode("dark") : switchMode("light");
+          }}
+          className="right-20 top-4 text-lg rounded-md"
+        >
+          {mode != "dark" ? moon : sun}
+        </motion.button>
       </div>
     </div>
   );

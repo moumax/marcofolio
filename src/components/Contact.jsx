@@ -1,12 +1,12 @@
 import Form from "./Form";
 import { LangContext } from "../context/LangContext";
 import { useContext } from "react";
-import traduction from "../Datas/Traduction.js";
+import traduction from "../Datas/dataTraduction";
 
 const Contact = () => {
   const { language } = useContext(LangContext);
   return (
-    <section className="relative h-screen">
+    <section className="relative h-screen -z-1">
       <h2 className="text-3xl">{traduction[language].formTitle}</h2>
       <Form />
     </section>

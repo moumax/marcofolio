@@ -20,7 +20,7 @@ import vscode_color from "../assets/hardskills/vscode_color.png"
 import notion_color from "../assets/hardskills/notion_color.png"
 import react_color from "../assets/hardskills/react_color.png"
 
-const HardSkills = [
+const dataHardSkills = [
   {
     id: 0,
     imageBw: react_bw,
@@ -83,4 +83,4 @@ const HardSkills = [
   }
 ];
 
-export default HardSkills;
+export default dataHardSkills;
