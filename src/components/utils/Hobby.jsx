@@ -7,15 +7,15 @@ const Hobby = ({ like }) => {
   const { mode } = useContext(ModeContext);
 
   return (
-    <div className="w-20 flex flex-col items-center">
-      <p className="text-xs text-center mb-2 2xl:text-xl">
+    <div className="xs:w-20 flex flex-col items-center md:wrap md:w-32">
+      <p className="xs:text-xs text-center mb-3 md:text-xl">
         {language == "fr" ? like.texteFr : like.texteEn}
       </p>
       {mode != "dark" ? (
-        <img className="w-10 2xl:w-36" src={like.imageBw} alt={like.imageBw} />
+        <img className="xs:w-10 md:w-16" src={like.imageBw} alt={like.imageBw} />
       ) : (
         <img
-          className="w-10 2xl:w-36"
+          className="xs:w-10 md:w-16"
           src={like.imageColor}
           alt={like.imageColor}
         />

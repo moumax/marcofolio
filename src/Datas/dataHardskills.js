@@ -75,12 +75,6 @@ const dataHardSkills = [
     imageColor: vscode_color,
     texte: "VsCode",
   },
-  {
-    id:10,
-    imageBw: notion_bw,
-    imageColor: notion_color,
-    texte: "Notion",
-  }
 ];
 
 export default dataHardSkills;
