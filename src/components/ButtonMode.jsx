@@ -40,22 +40,18 @@ const ButtonMode = () => {
   );
 
   return (
-    <div>
-      <div>
-        <motion.button
-          initial={{ scale: 1 }}
-          animate={{ scale: 1.4 }}
-          transition={{ repeat: Infinity, repeatDelay: 0.5 }}
-          type="button"
-          onClick={() => {
-            mode == "light" ? switchMode("dark") : switchMode("light");
-          }}
-          className="right-20 top-4 text-lg rounded-md"
-        >
-          {mode != "dark" ? moon : sun}
-        </motion.button>
-      </div>
-    </div>
+    <motion.button
+      className="grad"
+      initial={{ scale: 1 }}
+      animate={{ scale: 1.4 }}
+      transition={{ repeat: Infinity, repeatDelay: 1 }}
+      type="button"
+      onClick={() => {
+        mode == "light" ? switchMode("dark") : switchMode("light");
+      }}
+    >
+      {mode != "dark" ? moon : sun}
+    </motion.button>
   );
 };
 
