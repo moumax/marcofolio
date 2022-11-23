@@ -1,44 +1,56 @@
-import autonomie from "../assets/softskills/autonomie.png";
-import organisation from "../assets/softskills/organisation.png";
-import teamwork from "../assets/softskills/teamwork.png";
-import proactif from "../assets/softskills/proactif.png";
-import patience from "../assets/softskills/patience.png";
-import temps from "../assets/softskills/temps.png";
+import autonomy_bw from "../assets/softskills/autonomy_bw.png"
+import autonomy_color from "../assets/softskills/autonomy_color.png"
+import organisation_bw from "../assets/softskills/organisation_bw.png"
+import organisation_color from "../assets/softskills/organisation_color.png"
+import teamwork_bw from "../assets/softskills/teamwork_bw.png"
+import teamwork_color from "../assets/softskills/teamwork_color.png"
+import proactive_bw from "../assets/softskills/proactive_bw.png"
+import proactive_color from "../assets/softskills/proactive_color.png"
+import patience_bw from "../assets/softskills/patience_bw.png"
+import patience_color from "../assets/softskills/patience_color.png"
+import timeManagement_bw from "../assets/softskills/timeManagement_bw.png"
+import timeManagement_color from "../assets/softskills/timeManagement_color.png"
 
 const SoftSkills = [
   {
     id: 1,
-    image: autonomie,
+    imageBw: autonomy_bw,
+    imageColor: autonomy_color,
     texteFr: "Autonomie",
     texteEn: "Autonomy",
   },
   {
     id: 2,
-    image: organisation,
+    imageBw: organisation_bw,
+    imageColor: organisation_color,
     texteFr: "Organisation",
     texteEn: "Organisation",
   },
   {
     id: 3,
-    image: teamwork,
+    imageBw: teamwork_bw,
+    imageColor: teamwork_color,
     texteFr: "Travail d'équipe",
     texteEn: "Team working",
   },
   {
     id: 4,
-    image: proactif,
+    imageBw: proactive_bw,
+    imageColor: proactive_color,
     texteFr: "Proactivité",
     texteEn: "Proactivity",
   },
   {
     id: 5,
-    image: patience,
+    imageBw: patience_bw,
+    imageColor: patience_color,
     texteFr: "Patience",
     texteEn: "Patience",
   },
   {
     id: 6,
-    image: temps,
+    imageBw: timeManagement_bw,
+    imageColor: timeManagement_color,
     texteFr: "Gestion du temps",
     texteEn: "Time management",
   },
