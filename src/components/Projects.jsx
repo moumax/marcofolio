@@ -1,6 +1,7 @@
 import { LangContext } from "../context/LangContext";
 import { useContext } from "react";
 import { ModeContext } from "../context/ModeContext";
+import { motion } from "framer-motion";
 
 import traduction from "../Datas/dataTraduction";
 import dataPortfolio from "../Datas/dataPortfolio";
@@ -10,7 +11,12 @@ const Projects = () => {
   const { mode } = useContext(ModeContext);
 
   return (
-    <section className="relative mb-20">
+    <motion.section
+      initial={{ opacity: 0, x: 800 }}
+      animate={{ opacity: 1, x: 0 }}
+      transition={{ delay: 0.2, duration: 0.4 }}
+      className="relative mb-20"
+    >
       <h1 className="text-3xl mb-10">{traduction[language].projectTitle}</h1>
       {dataPortfolio.map((data) => (
         <div
@@ -72,7 +78,7 @@ const Projects = () => {
           </ul>
         </div>
       ))}
-    </section>
+    </motion.section>
   );
 };
 

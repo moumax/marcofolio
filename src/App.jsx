@@ -37,8 +37,8 @@ function App() {
         </motion.div>
         <div className="p-10">
           <Home />
-          <About />
-          <Projects />
+          {/* <About /> */}
+          {/* <Projects /> */}
           <Contact />
         </div>
       </div>
