@@ -13,7 +13,7 @@ const ButtonLanguage = () => {
   const { mode } = useContext(ModeContext);
 
   return (
-    <div className="xs:w-8">
+    <div className="xs:w-8 sm:w-12">
       {mode != "dark" ? (
         <motion.img
           src={language == "en" ? frBw : enBw}

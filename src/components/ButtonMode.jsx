@@ -12,7 +12,7 @@ const ButtonMode = () => {
       viewBox="0 0 24 24"
       strokeWidth={1.5}
       stroke="currentColor"
-      className="xs:w-8 xs:h-8 text-orange-400"
+      className="xs:w-8 xs:h-8 sm:w-12 sm:h-12 text-orange-400"
     >
       <path
         strokeLinecap="round"
@@ -29,7 +29,7 @@ const ButtonMode = () => {
       viewBox="0 0 24 24"
       strokeWidth={1.5}
       stroke="currentColor"
-      className="xs:w-8 xs:h-8 text-white"
+      className="xs:w-8 xs:h-8 sm:w-12 sm:h-12 text-white"
     >
       <path
         strokeLinecap="round"
@@ -40,22 +40,18 @@ const ButtonMode = () => {
   );
 
   return (
-    <div>
-      <div>
-        <motion.button
-          initial={{ scale: 1 }}
-          animate={{ scale: 1.4 }}
-          transition={{ repeat: Infinity, repeatDelay: 0.5 }}
-          type="button"
-          onClick={() => {
-            mode == "light" ? switchMode("dark") : switchMode("light");
-          }}
-          className="right-20 top-4 text-lg rounded-md"
-        >
-          {mode != "dark" ? moon : sun}
-        </motion.button>
-      </div>
-    </div>
+      <motion.button
+        className="grad"
+        initial={{ scale: 1 }}
+        animate={{ scale: 1.4 }}
+        transition={{ repeat: Infinity, repeatDelay: 1 }}
+        type="button"
+        onClick={() => {
+          mode == "light" ? switchMode("dark") : switchMode("light");
+        }}
+      >
+        {mode != "dark" ? moon : sun}
+      </motion.button>
   );
 };
 

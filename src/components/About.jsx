@@ -17,7 +17,7 @@ const About = () => {
 
   const classNameTitle = {
     className:
-      "text-start ml-2 text-2xl my-6 underline 2xl:text-4xl xs:text-xl",
+      "self-start text-2xl my-4 underline 2xl:text-4xl xs:text-xl md:text-3xl",
   };
   const classNameSkills = {
     className: "flex flex-wrap gap-2 justify-center 2xl:gap-20 2xl:w-fit",
@@ -28,7 +28,7 @@ const About = () => {
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true }}
-      className="flex flex-col items-center relative h-fit mb-16 "
+      className="flex flex-col items-center relative h-screen mb-16 justify-center"
     >
       <h2 className={classNameTitle.className}>
         {traduction[language].softSkillTitle}

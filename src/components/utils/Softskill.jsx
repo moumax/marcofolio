@@ -7,19 +7,19 @@ const Softskill = ({ skill }) => {
   const { mode } = useContext(ModeContext);
 
   return (
-    <div className="w-20 flex flex-col items-center">
-      <p className="text-xs text-center mb-3 2xl:text-xl">
+    <div className="xs:w-20 flex flex-col items-center md:wrap md:w-32">
+      <p className="xs:text-xs text-center mb-3 md:text-xl">
         {language == "fr" ? skill.texteFr : skill.texteEn}
       </p>
       {mode != "dark" ? (
         <img
-          className="w-10 2xl:w-36"
+          className="xs:w-10 md:w-16"
           src={skill.imageBw}
           alt={skill.imageBw}
         />
       ) : (
         <img
-          className="w-10 2xl:w-36"
+          className="xs:w-10 md:w-16"
           src={skill.imageColor}
           alt={skill.imageColor}
         />

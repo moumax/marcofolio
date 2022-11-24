@@ -27,7 +27,7 @@ function App() {
       >
         <GeneralBackgroundDark />
         <motion.div
-          className="fixed h-24 items-center flex gap-10 xs:flex-col xs:top-3 xs:left-80"
+          className="fixed h-24 flex gap-6 flex-col top-7 w-screen z-50 items-end right-5 sm:right-12 lg:top-7 lg:gap-10"
           initial={{ x: "-100vh" }}
           animate={{ x: 0 }}
           transition={{ delay: 0.5 }}
