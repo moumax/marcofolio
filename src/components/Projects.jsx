@@ -17,28 +17,28 @@ const Projects = () => {
           key={data.titre}
           className={
             mode === "dark"
-              ? "flex flex-col items-center border-2 border-slate-800 rounded-md overflow-hidden m-10"
-              : "flex flex-col items-center border-2 border-white rounded-md overflow-hidden m-10"
+              ? "w-fit flex flex-col items-center border-2 border-slate-800 rounded-md overflow-hidden m-10"
+              : "w-fit flex flex-col items-center border-2 border-white rounded-md overflow-hidden m-10"
           }
         >
+          <h2 className="text-start text-2xl mt-3 mb-5 ml-4 w-fit underline">
+            {data.titre}
+          </h2>
           <a href={data.lien} target="_blank" rel="noopener noreferrer">
             {mode == "dark" ? (
               <img
-                className="w-fit"
+                className="h-fit"
                 src={data.imageLight || data.image}
                 alt={data.imageLight}
               />
             ) : (
               <img
-                className="w-fit"
+                className="h-fit "
                 src={data.imageDark || data.image}
                 alt={data.imageDark}
               />
             )}
           </a>
-          <h2 className="text-start text-2xl mt-3 mb-5 ml-4 w-full underline">
-            {data.titre}
-          </h2>
           <ul className="flex flex-wrap justify-center gap-2 mb-7 text-md">
             {data.techno1 ? (
               <li className="border-2 border-stone-900 rounded-md hover:text-blue-300">
