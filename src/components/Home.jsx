@@ -42,7 +42,13 @@ const Home = () => {
           >
             {dataTraduction[language].search}
           </motion.h3>
-          <button onClick={affiche}>Click me</button>
+          <button
+            className="absolute w-fit bottom-5 right-10 bg-slate-700 rounded px-4 py-1"
+            type={"button"}
+            onClick={affiche}
+          >
+           Compétences 
+          </button>
         </section>
       )}
       {isShown && <About />}

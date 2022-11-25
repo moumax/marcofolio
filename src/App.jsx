@@ -27,7 +27,7 @@ function App() {
       >
         <GeneralBackgroundDark />
         <motion.div
-          className="fixed h-24 flex gap-6 flex-col top-7 w-screen z-50 items-end right-5 sm:right-12 lg:top-7 lg:gap-10"
+          className="absolute flex gap-6 w-screen z-50 justify-end right-3 top-3"
           initial={{ x: "-100vh" }}
           animate={{ x: 0 }}
           transition={{ delay: 0.5 }}
@@ -35,11 +35,11 @@ function App() {
           <ButtonLanguage />
           <ButtonMode />
         </motion.div>
-        <div className="p-10">
+        <div>
           <Home />
           {/* <About /> */}
           {/* <Projects /> */}
-          <Contact />
+          {/* <Contact /> */}
         </div>
       </div>
       {/* <Tools /> */}

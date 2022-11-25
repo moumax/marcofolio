@@ -29,7 +29,6 @@ const ButtonLanguage = () => {
       ) : (
         <motion.img
           src={language == "en" ? frColor : enColor}
-          className="grad"
           initial={{ scale: 1 }}
           animate={{ scale: 1.4 }}
           transition={{ repeat: Infinity, repeatDelay: 0.5 }}
