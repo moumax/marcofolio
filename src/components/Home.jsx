@@ -38,12 +38,12 @@ const Home = () => {
             initial={{ opacity: 0, blur: 1000 }}
             animate={{ opacity: 1, blur: 0 }}
             transition={{ delay: 2, duration: 0.6 }}
-            className="mt-10 sm:text-2xl xl:text-3xl"
+            className="mt-10 sm:text-2xl xl:text-3xl xs:mb-10"
           >
             {dataTraduction[language].search}
           </motion.h3>
           <button
-            className="absolute w-fit bottom-5 right-10 bg-slate-700 rounded px-4 py-1"
+            className="w-fit border-2 border-slate-500 rounded px-4 py-1 self-center"
             type={"button"}
             onClick={affiche}
           >

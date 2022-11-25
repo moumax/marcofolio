@@ -64,7 +64,7 @@ const About = () => {
             ))}
           </div>
           <button
-            className="absolute w-fit bottom-12 right-10 bg-slate-700 rounded px-4 py-1"
+            className="w-fit border-2 border-slate-500 rounded px-4 py-1 self-center z-50"
             type={"button"}
             onClick={affiche}
           >

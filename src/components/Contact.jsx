@@ -21,7 +21,7 @@ const Contact = () => {
           </h2>
           <Form />
           <button
-            className="absolute w-fit bottom-5 right-10 bg-slate-700 rounded px-4 py-1"
+            className="w-fit border-2 border-slate-500 rounded px-4 py-1 self-center"
             type={"button"}
             onClick={affiche}
           >
