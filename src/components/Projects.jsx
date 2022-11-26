@@ -23,12 +23,12 @@ const Projects = () => {
     <>
       {!isShown && (
         <motion.section
-          initial={{ opacity: 0, x: 800 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ delay: 0.2, duration: 0.4 }}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.2, duration: 2 }}
           className="relative w-screen flex flex-col h-screen justify-center"
         >
-          <h1 className="absolute top-0 mb-20 left-3 text-3xl mt-11 underline">
+          <h1 className="absolute top-0 mb-20 left-3 text-3xl mt-11 underline  bg-gradient-to-r from-orange-400 to-blue-800 bg-clip-text text-transparent">
             {traduction[language].projectTitle}
           </h1>
           <Carousel
@@ -67,7 +67,7 @@ const Projects = () => {
                     />
                   )}
                 </a>
-                <ul className="flex flex-wrap justify-center gap-2 mb-7 text-md">
+                <ul className="flex flex-wrap justify-center gap-2 mb-7 text-md mt-7">
                   {data.techno1 ? (
                     <li className="border-2 border-stone-900 rounded-md hover:text-blue-300">
                       <span className="m-2">{data.techno1}</span>
@@ -101,13 +101,16 @@ const Projects = () => {
               </div>
             ))}
           </Carousel>
-          <button
+          <motion.button
+            initial={{ opacity: 0, x: "100vw" }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ delay: 1, duration: 0.6 }}
             className="w-fit border-2 border-slate-500 rounded px-4 py-1 self-center"
             type={"button"}
             onClick={affiche}
           >
-          Me contacter 
-          </button>
+            Me contacter
+          </motion.button>
         </motion.section>
       )}
       {isShown && <Contact />}

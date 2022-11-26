@@ -17,12 +17,12 @@ const Home = () => {
   return (
     <>
       {!isShown && (
-        <section className="relative h-screen ml-5 mr-5 flex flex-col justify-center pb-48 z-0 md:gap-14">
+        <section className="relative h-screen ml-5 mr-5 flex flex-col justify-center pb-48 z-0 md:gap-14 ">
           <motion.h1
             initial={{ opacity: 0, x: -800 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ delay: 0.5, duration: 0.4 }}
-            className="text-5xl mb-10 mt-24 sm:text-6xl xl:text-7xl"
+            className="text-5xl mb-10 mt-24 sm:text-6xl xl:text-7xl bg-gradient-to-r from-black via-violet-800 to-pink-600 bg-clip-text text-transparent"
           >
             {dataTraduction[language].bonjour}
           </motion.h1>
@@ -42,13 +42,16 @@ const Home = () => {
           >
             {dataTraduction[language].search}
           </motion.h3>
-          <button
+          <motion.button
+            initial={{ opacity: 0, x: "100vw" }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ delay: 3, duration: 0.6 }}
             className="w-fit border-2 border-slate-500 rounded px-4 py-1 self-center"
             type={"button"}
             onClick={affiche}
           >
-           Compétences 
-          </button>
+            En savoir plus ?
+          </motion.button>
         </section>
       )}
       {isShown && <About />}
