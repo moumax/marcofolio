@@ -24,6 +24,8 @@ const traduction = {
   en: {
     bonjour: "Hello !",
     me: "My name is Marc and I'am a Full Stack web developer...",
+    search:
+      "I'am searching for an intership to learn Typescript and React Native, for one year.",
     //Form :
     formTitle: "Contact me",
     formName: "FirstName, LastName",
