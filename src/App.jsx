@@ -4,30 +4,25 @@ import { motion } from "framer-motion";
 
 import LangContextProvider from "./context/LangContext";
 
-import About from "./components/About";
 import Home from "./components/Home";
-import GeneralBackgroundDark from "./components/GeneralBackground";
-import Projects from "./components/Projects";
-import Contact from "./components/Contact";
 import ButtonLanguage from "./components/ButtonLanguage";
 import ButtonMode from "./components/ButtonMode";
-import Tools from "./pages/Tools";
+
+const classBackgroundDark =
+  "relative flex bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-gray-700 via-gray-900 to-black w-screen h-screen z-0 text-white ";
+const classBackgroundLight =
+  "relative flex bg-white w-screen h-screen z-0 text-black";
 
 function App() {
   const { mode } = useContext(ModeContext);
 
   return (
-    <LangContextProvider>
-      <div
-        className={
-          mode === "light"
-            ? "absolute text-center text-white"
-            : "absolute text-center text-black"
-        }
-      >
-        <GeneralBackgroundDark />
+    <div
+      className={mode == "light" ? classBackgroundLight : classBackgroundDark}
+    >
+      <LangContextProvider>
         <motion.div
-          className="absolute flex gap-6 w-screen z-50 justify-end right-3 top-3"
+          className="absolute flex gap-6  z-50 justify-end right-3 top-3"
           initial={{ x: "-100vh" }}
           animate={{ x: 0 }}
           transition={{ delay: 0.5 }}
@@ -35,15 +30,11 @@ function App() {
           <ButtonLanguage />
           <ButtonMode />
         </motion.div>
-        <div>
+        <div className="relative my-auto">
           <Home />
-          {/* <About /> */}
-          {/* <Projects /> */}
-          {/* <Contact /> */}
         </div>
-      </div>
-      {/* <Tools /> */}
-    </LangContextProvider>
+      </LangContextProvider>
+    </div>
   );
 }
 
