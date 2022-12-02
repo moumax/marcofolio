@@ -25,11 +25,10 @@ const Form = () => {
     "rounded-md m-3 text-center bg-transparent h-40 placeholder-green-50 border-2 border-stone-500 placeholder-opacity-50";
   const classTextareaLight =
     "rounded-md m-3 text-center bg-transparent h-40 placeholder-blue-400 border-2 border-stone-500 placeholder-opacity-50";
-  const classForm = "flex flex-col w-full text-xl font-bold h-5/6 justify-center"
 
   return (
     <form
-      className={classForm}
+      className="flex flex-col w-full text-xl font-bold h-5/6 justify-center"
       onSubmit={handlesubmit}
     >
       <input
