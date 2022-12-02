@@ -18,21 +18,21 @@ const Form = () => {
   };
 
   const classInputDark =
-    "rounded-md m-3 text-center bg-transparent placeholder-green-50 border-2 border-stone-500 placeholder-opacity-50";
+    "rounded-md text-center bg-transparent placeholder-green-50 border-2 border-stone-500 placeholder-opacity-50 w-full";
   const classInputLight =
-    "rounded-md m-3 text-center bg-transparent placeholder-blue-400 border-2 border-stone-500 placeholder-opacity-50";
+    "rounded-md text-center bg-transparent placeholder-blue-400 border-2 border-stone-500 placeholder-opacity-50 w-fit";
   const classTextareaDark =
-    "rounded-md m-3 text-center bg-transparent h-40 placeholder-green-50 border-2 border-stone-500 placeholder-opacity-50";
+    "rounded-md text-center bg-transparent h-40 placeholder-green-50 border-2 border-stone-500 placeholder-opacity-50 w-full";
   const classTextareaLight =
-    "rounded-md m-3 text-center bg-transparent h-40 placeholder-blue-400 border-2 border-stone-500 placeholder-opacity-50";
+    "rounded-md text-center bg-transparent h-40 placeholder-blue-400 border-2 border-stone-500 placeholder-opacity-50 w-fit";
 
   return (
     <form
-      className="flex flex-col w-full text-xl font-bold h-5/6 justify-center"
+      className="relative flex flex-col text-xl font-bold w-full gap-y-3"
       onSubmit={handlesubmit}
     >
       <input
-        className={mode === "light" ? classInputDark : classInputLight}
+        className={mode === "light" ? classInputLight : classInputDark}
         type="text"
         name="name"
         id="full-name"
@@ -40,7 +40,7 @@ const Form = () => {
         required
       ></input>
       <input
-        className={mode === "light" ? classInputDark : classInputLight}
+        className={mode === "light" ? classInputLight : classInputDark}
         type="email"
         id="email"
         name="email"
@@ -49,7 +49,7 @@ const Form = () => {
       ></input>
       <ValidationError prefix="Email" field="email" errors={state.errors} />
       <input
-        className={mode === "light" ? classInputDark : classInputLight}
+        className={mode === "light" ? classInputLight : classInputDark}
         type="phone number"
         name="phone"
         id="phone"
@@ -58,7 +58,7 @@ const Form = () => {
       ></input>
       <ValidationError prefix="Phone" field="phone" errors={state.errors} />
       <textarea
-        className={mode === "light" ? classTextareaDark : classTextareaLight}
+        className={mode === "light" ? classTextareaLight : classTextareaDark}
         type="message"
         id="message"
         name="message"

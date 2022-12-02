@@ -30,7 +30,7 @@ function App() {
           <ButtonLanguage />
           <ButtonMode />
         </motion.div>
-        <div className="relative my-auto">
+        <div className="relative my-auto ">
           <Home />
         </div>
       </LangContextProvider>
