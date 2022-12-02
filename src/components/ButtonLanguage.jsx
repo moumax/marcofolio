@@ -14,7 +14,7 @@ const ButtonLanguage = () => {
 
   return (
     <div className="xs:w-8 sm:w-12">
-      {mode != "dark" ? (
+      {mode != "light" ? (
         <motion.img
           src={language == "en" ? frBw : enBw}
           className="grad"

@@ -29,7 +29,7 @@ const ButtonMode = () => {
       viewBox="0 0 24 24"
       strokeWidth={1}
       stroke="currentColor"
-      className="xs:w-8 sm:w-12 sm:h-12 text-white"
+      className="xs:w-8 sm:w-12 sm:h-12 text-grey-400"
     >
       <path
         strokeLinecap="round"
@@ -49,7 +49,7 @@ const ButtonMode = () => {
           mode == "light" ? switchMode("dark") : switchMode("light");
         }}
       >
-        {mode != "dark" ? moon : sun}
+        {mode == "dark" ? sun : moon}
       </motion.button>
   );
 };
