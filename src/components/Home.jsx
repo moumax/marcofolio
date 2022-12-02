@@ -10,13 +10,13 @@ const Home = () => {
   const [isShown, setIsShown] = useState(false);
 
   const classSectionHome =
-    "relative h-screen ml-5 mr-5 flex flex-col justify-center pb-48 z-0 md:gap-14 ";
+    "relative h-screen mx-5 sm:mx-10 xl:mx-32 flex flex-col justify-center pb-48 z-0 md:gap-14";
   const classTitle =
     "text-5xl mb-10 mt-24 sm:text-6xl xl:text-7xl bg-gradient-to-r from-black via-violet-800 to-pink-600 bg-clip-text text-transparent";
   const classSubtitle = "text-black-600 text-2xl sm:text-3xl xl:text-4xl";
   const classPresentation = "mt-10 sm:text-2xl xl:text-3xl xs:mb-10";
   const classButton =
-    "w-fit border-2 border-slate-500 rounded px-4 py-1 self-center";
+    "w-fit border-2 border-slate-500 rounded px-4 py-1 self-center sm:text-xl lg:text-2xl xl:text-4xl";
 
   const affiche = (event) => {
     console.log("click");
