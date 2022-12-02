@@ -11,7 +11,7 @@ const Softskill = ({ skill }) => {
       <p className="xs:text-md text-center mb-3 sm:text-xl">
         {language == "fr" ? skill.texteFr : skill.texteEn}
       </p>
-      {mode != "dark" ? (
+      {mode == "dark" ? (
         <img
           className="mx-auto xs:w-6 sm:w-16 md:w-16"
           src={skill.imageBw}
