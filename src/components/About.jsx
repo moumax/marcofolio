@@ -1,15 +1,18 @@
 import { useContext, useState } from "react";
+import { LangContext } from "../context/LangContext";
 
 import { motion } from "framer-motion";
 
 import DataSoftSkills from "../Datas/dataSoftskills";
 import DatasHardSkills from "../Datas/dataHardskills";
+import dataTraduction from "../Datas/dataTraduction";
 
 import Softskill from "./utils/Softskill";
 import Hardskill from "./utils/Hardskill";
 import Projects from "./Projects.jsx";
 
 const About = () => {
+  const { language } = useContext(LangContext);
   const [isShown, setIsShown] = useState(false);
 
   const affiche = () => {
@@ -18,8 +21,6 @@ const About = () => {
 
   const classImgSkills =
     "mx-auto flex flex-wrap gap-2 justify-center z-50 xs:mb-10 lg:mb-36 w-full";
-
-
 
   return (
     <>
@@ -49,7 +50,7 @@ const About = () => {
               type={"button"}
               onClick={affiche}
             >
-              Projets
+              {dataTraduction[language].buttonAbout}
             </motion.button>
           </div>
         </motion.section>

@@ -51,7 +51,7 @@ const Home = () => {
               type={"button"}
               onClick={affiche}
             >
-              En savoir plus ?
+              {dataTraduction[language].buttonHome}
             </motion.button>
           </div>
         </section>

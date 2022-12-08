@@ -8,9 +8,11 @@ import { Carousel } from "react-responsive-carousel";
 
 import traduction from "../Datas/dataTraduction";
 import dataPortfolio from "../Datas/dataPortfolio";
+import dataTraduction from "../Datas/dataTraduction";
 import Contact from "./Contact.jsx";
 
 const Projects = () => {
+  const { language } = useContext(LangContext);
   const { mode } = useContext(ModeContext);
   const [isShown, setIsShown] = useState(false);
 
@@ -43,7 +45,7 @@ const Projects = () => {
               showStatus={false}
               showIndicators={false}
               showThumbs={false}
-              className="w-[90vw] xl:w-[70vw]" 
+              className="w-[90vw] xl:w-[70vw]"
             >
               {dataPortfolio.map((data) => (
                 <div
@@ -113,7 +115,7 @@ const Projects = () => {
               type={"button"}
               onClick={affiche}
             >
-              Me contacter
+              {dataTraduction[language].buttonProjects}
             </motion.button>
           </div>
         </motion.section>
