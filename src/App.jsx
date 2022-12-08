@@ -22,7 +22,7 @@ function App() {
     >
       <LangContextProvider>
         <motion.div
-          className="absolute flex gap-6  z-50 justify-end right-3 top-3"
+          className="absolute flex gap-6  z-50 justify-end right-3 top-3 xl:right-36 xl:top-14"
           initial={{ x: "-100vh" }}
           animate={{ x: 0 }}
           transition={{ delay: 0.5 }}
@@ -30,7 +30,7 @@ function App() {
           <ButtonLanguage />
           <ButtonMode />
         </motion.div>
-        <div className="relative my-auto ">
+        <div className="relative my-auto w-screen flex justify-center ">
           <Home />
         </div>
       </LangContextProvider>
