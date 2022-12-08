@@ -19,6 +19,8 @@ const About = () => {
   const classImgSkills =
     "mx-auto flex flex-wrap gap-2 justify-center z-50 xs:mb-10 lg:mb-36";
 
+
+
   return (
     <>
       {!isShown && (
