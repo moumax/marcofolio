@@ -4,6 +4,7 @@ import { useContext, useState } from "react";
 import { motion } from "framer-motion";
 
 import Home from "./Home.jsx";
+import dataTraduction from "../Datas/dataTraduction";
 
 const Contact = () => {
   const { language } = useContext(LangContext);
@@ -28,11 +29,11 @@ const Contact = () => {
               initial={{ opacity: 0, x: "100vw" }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ delay: 1, duration: 0.6 }}
-              className="w-fit border-2 border-slate-500 rounded px-4 py-1 mt-5"
+              className="w-fit border-2 border-slate-500 rounded px-4 py-1 mt-5 xl:text-3xl"
               type={"button"}
               onClick={affiche}
             >
-              Accueil
+              {dataTraduction[language].buttonContact}
             </motion.button>
           </div>
         </motion.section>

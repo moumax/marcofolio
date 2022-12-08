@@ -3,7 +3,7 @@ const traduction = {
     bonjour: "Bonjour!",
     me: "Je m'appelle Marc et je suis Développeur web Full Stack...",
     search:
-      "Je suis actuellement à la recherche d'une alternance d'un an pour pour obtenir le titre concepteur et developpeur d'application.",
+      "Je suis actuellement à la recherche d'une alternance d'un an pour apprendre le langage typeScript et le framework React Native ",
     //Form :
     formTitle: "Contactez moi",
     formName: "Nom, Prénom",
@@ -19,6 +19,10 @@ const traduction = {
     buttonLabel: "English",
     //Projects :
     projectTitle: "Mes projets",
+    buttonHome: "En savoir plus ?",
+    buttonAbout: "Mes projets",
+    buttonProjects: "Me Contacter",
+    buttonContact: "Retourner à l'accueil",
   },
 
   en: {
@@ -41,6 +45,10 @@ const traduction = {
     buttonLabel: "Français",
     //Projects :
     projectTitle: "My projects",
+    buttonHome: "Find out more ?",
+    buttonAbout: "My projects",
+    buttonProjects: "Contact me",
+    buttonContact: "Return to home",
   },
 };
 
