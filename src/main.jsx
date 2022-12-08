@@ -7,7 +7,7 @@ import ModeContextProvider from "./context/ModeContext";
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <ModeContextProvider>
-      <div>
+      <div className="overflow-hidden">
         <App />
       </div>
     </ModeContextProvider>
