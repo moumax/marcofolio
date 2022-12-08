@@ -29,7 +29,7 @@ const Contact = () => {
               initial={{ opacity: 0, x: "100vw" }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ delay: 1, duration: 0.6 }}
-              className="w-fit border-2 border-slate-500 rounded px-4 py-1 mt-5"
+              className="w-fit border-2 border-slate-500 rounded px-4 py-1 mt-5 xl:text-3xl"
               type={"button"}
               onClick={affiche}
             >

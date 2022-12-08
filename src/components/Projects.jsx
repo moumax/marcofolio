@@ -45,7 +45,7 @@ const Projects = () => {
               showStatus={false}
               showIndicators={false}
               showThumbs={false}
-              className="w-[90vw] xl:w-[70vw]"
+              className="w-[90vw] xl:w-[70vw] 2xl:w-[60vw]"
             >
               {dataPortfolio.map((data) => (
                 <div
@@ -111,7 +111,7 @@ const Projects = () => {
               initial={{ opacity: 0, x: "100vw" }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ delay: 1, duration: 0.6 }}
-              className="border-2 border-slate-500 rounded px-4 py-1 mx-auto mt-5"
+              className="border-2 border-slate-500 rounded px-4 py-1 mx-auto mt-20 xl:text-3xl"
               type={"button"}
               onClick={affiche}
             >
