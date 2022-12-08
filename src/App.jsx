@@ -23,7 +23,7 @@ function App() {
       <LangContextProvider>
         <motion.div
           className="absolute flex gap-6  z-50 justify-end right-3 top-3 xl:right-36 xl:top-14"
-          initial={{ x: "-100vh" }}
+          initial={{ x: "-200vw" }}
           animate={{ x: 0 }}
           transition={{ delay: 0.5 }}
         >

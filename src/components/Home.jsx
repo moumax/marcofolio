@@ -20,7 +20,7 @@ const Home = () => {
         <section className="relative mx-10 flex justify-center items-center w-screen">
           <div className="flex flex-col">
             <motion.h1
-              initial={{ opacity: 0, x: -800 }}
+              initial={{ opacity: 0, x: "-200vw" }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ delay: 0.5, duration: 0.4 }}
               className="mx-auto w-fit text-6xl xl:text-8xl bg-gradient-to-r from-black via-violet-800 to-pink-600 bg-clip-text text-transparent mb-10 xl:mb-32"
