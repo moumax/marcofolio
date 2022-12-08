@@ -20,9 +20,9 @@ const Contact = () => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.2, duration: 2 }}
-          className="relative w-screen h-fit  p-5"
+          className="relative flex flex-col justify-center items-center"
         >
-          <div className="flex flex-col justify-center items-center">
+          <div className="flex flex-col w-screen h-[70vh] mx-auto justify-center items-center">
             <Form />
             <motion.button
               initial={{ opacity: 0, x: "100vw" }}

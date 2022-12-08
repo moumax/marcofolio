@@ -18,17 +18,17 @@ const Form = () => {
   };
 
   const classInputDark =
-    "rounded-md text-center bg-transparent placeholder-green-50 border-2 border-stone-500 placeholder-opacity-50 w-full";
+    "rounded-md text-center text-sm xl:text-2xl bg-transparent placeholder-green-50 border-2 border-stone-500 placeholder-opacity-50 w-full h-10 xl:h-16";
   const classInputLight =
-    "rounded-md text-center bg-transparent placeholder-blue-400 border-2 border-stone-500 placeholder-opacity-50 w-fit";
+    "rounded-md text-center text-sm bg-transparent placeholder-blue-400 border-2 border-stone-500 placeholder-opacity-50 w-full h-10 xl:h-16";
   const classTextareaDark =
-    "rounded-md text-center bg-transparent h-40 placeholder-green-50 border-2 border-stone-500 placeholder-opacity-50 w-full";
+    "rounded-md text-center text-sm xl:text-2xl bg-transparent h-40 placeholder-green-50 border-2 border-stone-500 placeholder-opacity-50 w-full xl:h-60";
   const classTextareaLight =
-    "rounded-md text-center bg-transparent h-40 placeholder-blue-400 border-2 border-stone-500 placeholder-opacity-50 w-fit";
+    "rounded-md text-center text-sm xl:text-2xl bg-transparent h-40 placeholder-blue-400 border-2 border-stone-500 placeholder-opacity-50 w-full xl:h-60";
 
   return (
     <form
-      className="relative flex flex-col text-xl font-bold w-full gap-y-3"
+      className="relative flex flex-col text-xl font-bold w-[80vw] xl:w-[70vw] gap-y-6 items-center"
       onSubmit={handlesubmit}
     >
       <input
