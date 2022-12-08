@@ -17,7 +17,7 @@ const About = () => {
   };
 
   const classImgSkills =
-    "mx-auto flex flex-wrap gap-2 justify-center z-50 xs:mb-10 lg:mb-36";
+    "mx-auto flex flex-wrap gap-2 justify-center z-50 xs:mb-10 lg:mb-36 w-full";
 
 
 
@@ -28,9 +28,9 @@ const About = () => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.2, duration: 2.5 }}
-          className="relative mx-10"
+          className="relative mx-10 flex justify-center items-center w-screen"
         >
-          <div className="z-0 mx-5 sm:mx-20 xl:mx-40 flex flex-col">
+          <div className="z-0 mx-5 sm:mx-20 xl:mx-40 flex flex-col w-screen h-[70vh] justify-center">
             <div className={classImgSkills}>
               {DataSoftSkills.map((skill) => (
                 <Softskill skill={skill} key={skill.id} />
