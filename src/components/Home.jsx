@@ -17,7 +17,7 @@ const Home = () => {
   return (
     <>
       {!isShown && (
-        <section className="relative mx-10">
+        <section className="relative mx-10 flex justify-center items-center w-screen">
           <div className="flex flex-col">
             <motion.h1
               initial={{ opacity: 0, x: -800 }}

@@ -33,9 +33,9 @@ const Projects = () => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.2, duration: 2 }}
-          className="relative w-screen"
+          className="relative mx-10 flex flex-col justify-center items-center"
         >
-          <div className="flex flex-col w-fit mx-auto">
+          <div className="flex flex-col w-screen h-[70vh] mx-auto justify-center items-center">
             <Carousel
               infiniteLoop
               autoPlay
@@ -43,7 +43,7 @@ const Projects = () => {
               showStatus={false}
               showIndicators={false}
               showThumbs={false}
-              className="relative w-[90vw] "
+              className="w-[90vw] xl:w-[70vw]" 
             >
               {dataPortfolio.map((data) => (
                 <div
