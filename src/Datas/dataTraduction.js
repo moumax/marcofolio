@@ -1,6 +1,7 @@
 const traduction = {
   fr: {
-    bonjour: "Bonjour!",
+    bonjour: "Bonjour !",
+    hello: "Hello !",
     me: "Je m'appelle Marc et je suis Développeur web Full Stack...",
     search:
       "Je suis actuellement à la recherche d'une alternance d'un an pour apprendre le langage typeScript et le framework React Native ",

@@ -1,6 +1,7 @@
 import { LangContext } from "../context/LangContext";
-import { useContext, useEffect, useState } from "react";
+import { useContext, useState } from "react";
 import { motion } from "framer-motion";
+import { TypeAnimation } from "react-type-animation";
 
 import dataTraduction from "../Datas/dataTraduction";
 import About from "./About.jsx";
@@ -13,20 +14,22 @@ const Home = () => {
     console.log("click");
     setIsShown((current) => !current);
   };
+  const toto = dataTraduction[language].bonjour;
+  const tata = dataTraduction[language].hello;
 
   return (
     <>
       {!isShown && (
         <section className="relative mx-10 flex justify-center items-center w-screen">
           <div className="flex flex-col">
-            <motion.h1
-              initial={{ opacity: 0, x: "-200vw" }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ delay: 0.5, duration: 0.4 }}
-              className="mx-auto w-fit text-6xl xl:text-8xl bg-gradient-to-r from-black via-violet-800 to-pink-600 bg-clip-text text-transparent mb-10 xl:mb-32"
-            >
-              {dataTraduction[language].bonjour}
-            </motion.h1>
+            <TypeAnimation
+              sequence={[toto, 1000, tata, 2000]}
+              repeat={Infinity}
+              wrapper="h1"
+              cursor={false}
+              className="fixed mx-auto top-20 xl:top-40 xs:left-1/3 xl:left-1/2 text-6xl xl:text-8xl bg-gradient-to-r from-black via-violet-800 to-pink-600 bg-clip-text text-transparent mb-10 xl:mb-32"
+              speed={70}
+            />
             <motion.h2
               initial={{ opacity: 0, x: "100vw" }}
               animate={{ opacity: 1, x: 0 }}
