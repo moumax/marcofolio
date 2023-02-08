@@ -15,6 +15,7 @@ import Projects from "./Projects.jsx";
 const About = () => {
   const { language } = useContext(LangContext);
   const [isShown, setIsShown] = useState(false);
+  const [switcher, setSwitcher] = useState(false);
 
   const affiche = () => {
     setIsShown((current) => !current);
@@ -36,7 +37,14 @@ const About = () => {
     },
   ];
 
-  const initialSelectedIndex = options.findIndex(({value}) => value === "SoftSkills");
+  const initialSelectedIndex = options.findIndex(
+    ({ value }) => value === "SoftSkills"
+  );
+
+  const onChange = () => {
+    setSwitcher((current) => !current);
+    console.log(switcher);
+  };
 
   return (
     <>
@@ -53,23 +61,28 @@ const About = () => {
               style={{ width: 200, height: 50 }}
             >
               <SwitchSelector
-                // onChange={onChange}
+                onChange={onChange}
                 options={options}
                 initialSelectedIndex={initialSelectedIndex}
                 backgroundColor={"#353b48"}
                 fontColor={"#f5f6fa"}
               />
             </div>
-            <div className={classImgSkills}>
-              {DataSoftSkills.map((skill) => (
-                <Softskill skill={skill} key={skill.id} />
-              ))}
-            </div>
-            <div className={classImgSkills}>
-              {DatasHardSkills.map((skill) => (
-                <Hardskill skill={skill} key={skill.id} />
-              ))}
-            </div>
+            {!switcher && (
+              <div className={classImgSkills}>
+                {DataSoftSkills.map((skill) => (
+                  <Softskill skill={skill} key={skill.id} />
+                ))}
+              </div>
+            )}
+            {switcher && (
+              <div className={classImgSkills}>
+                {DatasHardSkills.map((skill) => (
+                  <Hardskill skill={skill} key={skill.id} />
+                ))}
+              </div>
+            )}
+
             <motion.button
               initial={{ opacity: 0, x: "100vw" }}
               animate={{ opacity: 1, x: 0 }}
