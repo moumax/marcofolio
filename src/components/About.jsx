@@ -1,5 +1,6 @@
 import { useContext, useState } from "react";
 import { LangContext } from "../context/LangContext";
+import SwitchSelector from "react-switch-selector";
 
 import { motion } from "framer-motion";
 
@@ -22,6 +23,21 @@ const About = () => {
   const classImgSkills =
     "mx-auto flex flex-wrap gap-2 justify-center z-50 xs:mb-10 lg:mb-36 w-full";
 
+  const options = [
+    {
+      label: "SoftSkills",
+      value: "SoftSkills",
+      selectedBackgroundColor: "#0097e6",
+    },
+    {
+      label: "HardSkills",
+      value: "HardSkills",
+      selectedBackgroundColor: "#fbc531",
+    },
+  ];
+
+  const initialSelectedIndex = options.findIndex(({value}) => value === "SoftSkills");
+
   return (
     <>
       {!isShown && (
@@ -32,6 +48,18 @@ const About = () => {
           className="relative mx-10 flex justify-center items-center w-screen"
         >
           <div className="z-0 mx-5 sm:mx-20 xl:mx-40 flex flex-col w-screen h-[70vh] justify-center">
+            <div
+              className="your-required-wrapper"
+              style={{ width: 200, height: 50 }}
+            >
+              <SwitchSelector
+                // onChange={onChange}
+                options={options}
+                initialSelectedIndex={initialSelectedIndex}
+                backgroundColor={"#353b48"}
+                fontColor={"#f5f6fa"}
+              />
+            </div>
             <div className={classImgSkills}>
               {DataSoftSkills.map((skill) => (
                 <Softskill skill={skill} key={skill.id} />
