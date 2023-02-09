@@ -55,10 +55,11 @@ const About = () => {
           transition={{ delay: 0.2, duration: 2.5 }}
           className="relative mx-10 flex justify-center items-center w-screen"
         >
+          {/* Style for container */}
           <div className="z-0 mx-5 sm:mx-20 xl:mx-40 flex flex-col w-screen h-[70vh] justify-center">
             <div
-              className="your-required-wrapper"
-              style={{ width: 200, height: 50 }}
+              //Style for button switcher
+              className="absolute top-0 right-24 mx-auto xs:w-48 xs:h-11 sm:w-80 sm:h-16 "
             >
               <SwitchSelector
                 onChange={onChange}
@@ -87,7 +88,8 @@ const About = () => {
               initial={{ opacity: 0, x: "100vw" }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ delay: 1, duration: 0.6 }}
-              className="border-2 border-slate-500 rounded px-4 py-1 mx-auto xl:text-3xl"
+              // Style for button project
+              className="absolute bottom-0 right-32 border-2 border-slate-500 rounded px-4 py-1 mx-auto xl:text-3xl"
               type={"button"}
               onClick={affiche}
             >
