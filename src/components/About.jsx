@@ -25,7 +25,7 @@ const About = () => {
   };
 
   const classImgSkills =
-    "mx-auto flex flex-wrap gap-2 justify-center z-50 xs:mb-32 lg:mb-36 w-full xs:mt-20";
+    "mx-auto flex flex-wrap gap-2 justify-center z-50 xs:mb-32 xl:mb-60 lg:mb-36 w-full xs:mt-20";
 
   const options = [
     {
@@ -44,7 +44,6 @@ const About = () => {
 
   const onChange = () => {
     setSwitcher((current) => !current);
-    console.log(mode);
   };
 
   return (
@@ -54,14 +53,13 @@ const About = () => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.2, duration: 2.5 }}
-          className="relative mx-10 flex w-screen"
+          className="relative mx-10 flex w-screen h-screen"
         >
           {/* Style for container */}
-          <div className="z-0 mx-5 sm:mx-20 xl:mx-40 flex flex-col w-screen h-[70vh] justify-start">
+          <div className="z-0 xs:mt-24 xl:mt-48 mx-5 sm:mx-20 xl:mx-40 flex flex-col w-screen justify-start">
             <div
               //Style for button switcher
-              // className="absolute top-0 right-24 mx-auto xs:w-48 xs:h-11 sm:w-80 sm:h-16 "
-              className="relative mx-auto xs:w-48 xs:h-11 sm:w-80 sm:h-16"
+              className="relative mx-auto xs:w-52 xs:h-11 sm:w-80 sm:h-16 xl:mb-40"
             >
               {mode == "dark" ? (
                 <SwitchSelector

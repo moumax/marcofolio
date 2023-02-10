@@ -12,7 +12,8 @@ const ButtonMode = () => {
       viewBox="0 0 24 24"
       strokeWidth={1}
       stroke="currentColor"
-      className="xs:w-8 sm:w-12 sm:h-12 text-orange-400"
+      // style for button mode
+      className="xs:w-10 sm:w-10 sm:h-12 text-orange-400"
     >
       <path
         strokeLinecap="round"
@@ -42,8 +43,8 @@ const ButtonMode = () => {
   return (
       <motion.button
         initial={{ scale: 1 }}
-        animate={{ scale: 1.4 }}
-        transition={{ repeat: Infinity, repeatDelay: 1 }}
+        // animate={{ scale: 1.4 }}
+        // transition={{ repeat: Infinity, repeatDelay: 1 }}
         type="button"
         onClick={() => {
           mode == "light" ? switchMode("dark") : switchMode("light");

@@ -22,13 +22,18 @@ function App() {
     >
       <LangContextProvider>
         <motion.div
-          className="absolute flex gap-6  z-50 justify-end right-3 top-3 xl:right-36 xl:top-14"
+          // style for box
+          className="absolute bg-slate-700 -right-5 bottom-24 w-20 h-24 rounded-2xl"
+          // className="absolute flex gap-6 z-50 justify-end right-3 top-3 xl:right-36 xl:top-14 bg-white"
           initial={{ x: "-200vw" }}
           animate={{ x: 0 }}
           transition={{ delay: 0.5 }}
         >
-          <ButtonLanguage />
-          <ButtonMode />
+          {/* style for logos */}
+          <div className="flex flex-col w-full h-full justify-center items-center pr-4">
+            <ButtonLanguage />
+            <ButtonMode />
+          </div>
         </motion.div>
         <div className="relative my-auto w-screen flex justify-center ">
           <Home />

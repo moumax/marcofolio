@@ -13,14 +13,14 @@ const ButtonLanguage = () => {
   const { mode } = useContext(ModeContext);
 
   return (
-    <div className="xs:w-8 sm:w-12">
+    <div className="xs:w-8 sm:w-8">
       {mode != "light" ? (
         <motion.img
           src={language == "en" ? frBw : enBw}
           className="grad"
           initial={{ scale: 1 }}
-          animate={{ scale: 1.4 }}
-          transition={{ repeat: Infinity, repeatDelay: 1 }}
+          // animate={{ scale: 1.4 }}
+          // transition={{ repeat: Infinity, repeatDelay: 1 }}
           type="button"
           onClick={() => {
             language == "fr" ? switchLang("en") : switchLang("fr");
@@ -30,8 +30,8 @@ const ButtonLanguage = () => {
         <motion.img
           src={language == "en" ? frColor : enColor}
           initial={{ scale: 1 }}
-          animate={{ scale: 1.4 }}
-          transition={{ repeat: Infinity, repeatDelay: 0.5 }}
+          // animate={{ scale: 1.4 }}
+          // transition={{ repeat: Infinity, repeatDelay: 0.5 }}
           type="button"
           onClick={() => {
             language == "fr" ? switchLang("en") : switchLang("fr");
