@@ -35,7 +35,7 @@ function App() {
             <ButtonMode />
           </div>
         </motion.div>
-        <div className="relative my-auto w-screen flex justify-center ">
+        <div className="relative my-auto w-screen flex justify-center -z-50">
           <Home />
         </div>
       </LangContextProvider>
